@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">РМПКурсовая</string>
-    <string name="tab_text_1">Tab 1</string>
-    <string name="tab_text_2">Tab 2</string>
+    <string name="app_name">Какой-то переводчик</string>
+    <string name="tab_text_1">Переводчик</string>
+    <string name="tab_text_2">Словарь</string>
+    <string name="Trans">Переводчик</string>
+    <string name="WordBook">Словарь</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
