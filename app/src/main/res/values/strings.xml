@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <string name="app_name">Какой-то переводчик</string>
     <string name="tab_text_1">Переводчик</string>
     <string name="tab_text_2">Словарь</string>
@@ -6,4 +6,7 @@
     <string name="WordBook">Словарь</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="input">Введите текст</string>
+    <string name="translation">Перевети</string>
+    <string name="find">Найти</string>
 </resources>
