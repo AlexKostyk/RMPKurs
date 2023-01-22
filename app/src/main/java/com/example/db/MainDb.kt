@@ -10,12 +10,21 @@ abstract class MainDb : RoomDatabase() {
     abstract fun getDao(): Dao
 
     companion object{
-        fun getDb(context:Context):MainDb{
-            return Room.databaseBuilder(
-                context.applicationContext,
-                MainDb::class.java,
-                "test.db"
-            ).build()
+        @Volatile
+        private var INSTANCE: MainDb? = null
+        fun getDb(context:Context):MainDb {
+            synchronized(this) {
+                var instance = INSTANCE
+                if (instance == null) {
+                    instance = Room.databaseBuilder(
+                        context.applicationContext,
+                        MainDb::class.java,
+                        "slangtablenew.db"
+                    ).build()
+                    INSTANCE = instance
+                }
+                return instance
+            }
         }
     }
 }

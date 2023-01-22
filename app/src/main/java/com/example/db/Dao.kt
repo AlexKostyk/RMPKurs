@@ -8,13 +8,16 @@ import kotlinx.coroutines.flow.Flow
 @Dao
 interface Dao {
     @Insert
-    fun insertItem(slangtable: Slangtable)
+    fun insert(slangtable: Slangtable)
     @Query("SELECT * FROM slangtable")
     fun getAllItem(): Flow<List<Slangtable>>
-    @Query("SELECT * FROM slangtable WHERE id = :key")
-    fun get(key: Long): Slangtable?
+    @Query("SELECT description FROM slangtable WHERE slang LIKE :slang")
+    fun getDescription(slang: String): String?
+    @Query("SELECT synonym FROM slangtable WHERE slang LIKE :slang")
+    fun getSynonym(slang: String): String?
     @Query("DELETE FROM slangtable")
     fun clear()
-    @Query("DELETE FROM slangtable WHERE id = 9999")
-    fun clearTestValue()
+    @Query("SELECT * FROM slangtable ORDER BY id DESC LIMIT 1")
+    fun getTonight(): Slangtable?
+
 }
