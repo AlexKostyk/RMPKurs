@@ -19,7 +19,7 @@ abstract class MainDb : RoomDatabase() {
                     instance = Room.databaseBuilder(
                         context.applicationContext,
                         MainDb::class.java,
-                        "slangtablenew.db"
+                        "slang_translator1.db"
                     ).build()
                     INSTANCE = instance
                 }

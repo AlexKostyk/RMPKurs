@@ -56,22 +56,28 @@
 
         <ImageButton
             android:id="@+id/buttonTranslator"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="60dp"
+            android:background="@android:color/transparent"
             android:contentDescription="@string/Trans"
             android:scaleType="centerCrop"
-            android:src="@drawable/translation_img"
+            android:src="@drawable/translato_img"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <ImageButton
             android:id="@+id/buttonWordBook"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="8dp"
+            android:background="@android:color/transparent"
             android:contentDescription="@string/WordBook"
             android:scaleType="centerCrop"
-            android:src="@drawable/translation_img"
+            android:src="@drawable/dictionary_grey"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />

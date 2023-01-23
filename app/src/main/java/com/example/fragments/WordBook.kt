@@ -5,13 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.asLiveData
 import com.example.MainActivity
 import com.example.databinding.FragmentWordBookBinding
 import com.example.db.MainDb
-import com.example.db.SlangViewModel
-import com.example.db.SlangViewModelFactory
 
 
 class WordBook : Fragment() {
@@ -32,7 +28,7 @@ class WordBook : Fragment() {
             Thread{
                 description = db.getDao().getDescription(word)
                 if (description == null){
-                    binding.descriptionText.text = "Слово не найдено"
+                    binding.descriptionText.text = "Слово «$word» не найдено"
                 }
                 else{
                     binding.descriptionText.text = description

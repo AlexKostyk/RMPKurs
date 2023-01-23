@@ -35,22 +35,17 @@ class Translator : Fragment() {
                     translated_words.add(it)
                 }
                 else{
-                    translated_words.add(word.toString().trim())
+                    translated_words.addAll(stringToWords(word.toString()))
                 }
             }
-            println(translated_words)
             translated_words.forEach {
                 if ((isLetters(it) && translated_words.indexOf(it) == 0) || !isLetters(it)){
                     if (words[0].toCharArray()[0].isUpperCase()){
                         translate += it.capitalize()
                     }
-                    else {
-                        translate += it
-                    }
+                    else translate += it
                 }
-                else{
-                    translate += " $it"
-                }
+                else translate += " $it"
             }
             textView.text = translate
         }
